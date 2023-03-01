@@ -24,18 +24,31 @@
             <h1 class='h1 text-white'>Taste Our Delicious <br> Best Foods</h1>
             <p class='text-white mt-3 p-sm-2'>There are many variations of passages of Lorem Ipsum available, but the majority have <br> suffered alteration in some form, by injected humou.</p>
             <div class='d-flex justify-content-center position-relative'>
-                <input class='search-hero rounded-start p-3 w-75' type="text" placeholder='search any food'>
-                <button class='search-hero bg-warning h3 border-0 rounded-2 p-3 position-absolute translate-middle-x end-0'>Search</button>
+                <input id='search-field' class='search-hero rounded-start p-3 w-75' type="text" placeholder='search any food'>
+                <button id='btn-search' class='search-hero bg-warning h3 border-0 rounded-2 p-3 position-absolute translate-middle-x end-0'>Search</button>
             </div>
         </div>
     </header>
     <main class="container mt-5">
         <section>
-            <h1 class='h1 text-center'>Your Favourite Food</h1>
-            <div id='mealSection' class="row">
+            <h1 class='h1 text-center mb-4'>Your Favourite Food</h1>
+            <div id='mealSection' class="row row-cols-1 row-cols-md-2">
                 
             </div>
-    
+            <div id='no-found-message' class='mt-4 d-none'>
+                <h3 class='text-warning'>No Food Found, please try a new search</h3>
+            </div>
+            <div id='show-all' class='text-center d-none'>
+                <button id='btn-show-all' class='btn btn-warning'>Show All</button>
+            </div>
+        </section>
+        <!-- Loader -->
+        <section id='loader' class='d-none'>
+            <div class="d-flex justify-content-center align-items-center" style='height: 200px;'>
+                <div class="spinner-border text-success" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
         </section>
     </main>
     <footer class='container text-start mt-5'>
